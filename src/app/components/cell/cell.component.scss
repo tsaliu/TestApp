@@ -1,0 +1,34 @@
+.cell {
+  cursor: pointer;
+
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  min-height: 10px;
+
+  .untouched {
+    border-radius: 1rem;
+    border: 5rem;
+
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+
+    &:hover {
+      background: blue;
+    }
+  }
+
+  .flipped {
+    border-radius: 1rem;
+    border: 5rem;
+
+    width: 100%;
+    height: 100%;
+    background: black;
+
+    &:hover {
+      background: red;
+    }
+  }
+}

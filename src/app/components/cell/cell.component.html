@@ -1,0 +1,12 @@
+<ng-container>
+  <div class="cell" *ngrxLet="cellStatus as status">
+    <div
+      [ngClass]="{ untouched: status === CellStatus.Untouched, flipped: status !== CellStatus.Untouched }"
+      (click)="onClick($event)"
+      (drag)="onClick($event)"
+      (dragover)="onClick($event)"
+    >
+      {{ display }}
+    </div>
+  </div>
+</ng-container>

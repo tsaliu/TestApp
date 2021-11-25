@@ -1,0 +1,17 @@
+<!-- <ng-container *ngrxLet="xSize as x">
+  <mat-grid-list class="grid-list" cols="100" rowHeight="1:1">
+    <mat-grid-tile
+      class="untouched"
+      id="tile-{{ i }}"
+      *ngFor="let in of flatGrid | async; let i = index"
+    ></mat-grid-tile>
+  </mat-grid-list>
+</ng-container> -->
+
+<ng-container *ngrxLet="grid as g">
+  <div class="display-row grid-list">
+    <div class="display-col" *ngFor="let row of g; let r = index">
+      <cell [location]="{ x: c, y: r }" *ngFor="let col of row; let c = index"></cell>
+    </div>
+  </div>
+</ng-container>
